@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7df">
+  <title>El gran quiz del universo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="El gran quiz del universo, inicio">
+        <span class="brand-mark" aria-hidden="true">?</span>
+        <span>EL GRAN QUIZ<br>DEL UNIVERSO</span>
+      </a>
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true">
+        <span id="sound-icon" aria-hidden="true">♪</span>
+        <span id="sound-label">Sonido: sí</span>
+      </button>
+    </header>
+
+    <section class="intro-card" id="intro">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="sparkle" aria-hidden="true">✦</span> 14 preguntas · 3 opciones · cero exámenes</p>
+        <h1>¿Y si el universo<br>tuviera <span>un secreto?</span></h1>
+        <p class="intro-description">Un viaje divertido por las grandes preguntas sobre Dios, el universo y todo lo demás. No hay respuestas correctas: ¡solo distintas maneras de mirar las estrellas!</p>
+        <button class="button button-primary" id="start-button" type="button">
+          ¡Vamos a descubrirlo! <span aria-hidden="true">→</span>
+        </button>
+        <p class="tiny-note">Un juego para curiosear, no para convencer.</p>
+      </div>
+      <div class="cosmos-art" aria-hidden="true">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <span class="planet">?</span>
+        <span class="star star-one">✦</span>
+        <span class="star star-two">✧</span>
+        <span class="star star-three">✦</span>
+        <span class="art-caption">la gran<br>pregunta</span>
+      </div>
+    </section>
+
+    <section class="quiz-card" id="quiz" hidden aria-live="polite">
+      <div class="quiz-topline">
+        <span class="question-count" id="question-count">PREGUNTA 1 DE 14</span>
+        <span class="progress-label" id="progress-label">¡Calentando motores!</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Progreso del juego" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" id="progress">
+        <span class="progress-fill" id="progress-fill"></span>
+      </div>
+      <div class="question-content">
+        <span class="question-doodle" aria-hidden="true">✳</span>
+        <h2 id="question-text"></h2>
+        <p class="answer-prompt">Elige la que más se parece a lo que piensas:</p>
+        <div class="answers" id="answers"></div>
+      </div>
+      <div class="quiz-footer">
+        <span class="footer-star" aria-hidden="true">★</span>
+        <span>No hay respuestas buenas ni malas. ¡Sigue tu curiosidad!</span>
+      </div>
+    </section>
+
+    <section class="result-card" id="result" hidden aria-live="polite">
+      <div class="result-illustration" aria-hidden="true"><span>✦</span><strong>¡</strong><i>★</i></div>
+      <p class="eyebrow">MISIÓN CÓSMICA COMPLETADA</p>
+      <h2 id="result-title">Tu mirada al universo</h2>
+      <p class="result-description" id="result-description"></p>
+      <div class="result-stats" id="result-stats"></div>
+      <p class="result-footnote">Este resultado es solo un juego: tus ideas pueden cambiar y combinarse como quieras.</p>
+      <button class="button button-primary" id="restart-button" type="button">Jugar otra vez <span aria-hidden="true">↻</span></button>
+    </section>
+
+    <footer class="page-footer">
+      <span>HECHO PARA PENSAR, REÍR Y MIRAR AL CIELO</span>
+      <span aria-hidden="true">☼ &nbsp; ✦ &nbsp; ☾</span>
+    </footer>
+  </main>
+</body>
+</html>
